@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import liff from "@line/liff";
 import "./App.css";
+import ReadQRCode from "./components/ReadQRCode";
 
 function App() {
   const [message, setMessage] = useState("");
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <div className="App">
+      <ReadQRCode></ReadQRCode>
       <h1>create-liff-app</h1>
       {message && <p>{message}</p>}
       {error && (
@@ -41,14 +43,7 @@ function App() {
         </p>
       )}
       {name && <p>こんにちは、{name}さん</p>}
-      {picture && <img src={picture}></img>}
-      <a
-        href="https://developers.line.biz/ja/docs/liff/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        LIFF Documentation
-      </a>
+      {picture && <img width={"100%"} src={picture}></img>}
     </div>
   );
 }
