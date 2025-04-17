@@ -50,7 +50,7 @@ function App() {
         </p>
       )}
       {name && <p>こんにちは、{name}さん</p>}
-      {picture && <img width={"40vw"} src={picture}></img>}
+      {picture && <img width={"80%"} src={picture}></img>}
       <QRScannerModal
         open={isModalOpen}
         onClose={() => setIsModalOpen(false)}
